@@ -1,0 +1,2 @@
+export type Dashboard = {totalProducts:number;coveragePercent:number;citiesLive:number;outOfStock:number;competitors:number;priceChanges:number;todaysScan:number;latestAlerts:{id:number;severity:string;message:string;createdAt:string}[];topCities:{name:string;observations:number}[]};
+export type Product = {id:number;sku:string;brand:string;category:string;image_url?:string;blinkit_url:string;blinkit_product_id:string;status:string;created_at:string};

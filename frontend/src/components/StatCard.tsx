@@ -1,0 +1,2 @@
+import { ReactNode } from "react";
+export function StatCard({label,value,icon}:{label:string;value:ReactNode;icon:ReactNode}){return <section className="glass rounded-3xl p-5 transition hover:-translate-y-1"><div className="flex items-center justify-between text-slate-300"><span>{label}</span><span className="text-brand">{icon}</span></div><strong className="mt-4 block text-3xl text-white">{value}</strong></section>}
