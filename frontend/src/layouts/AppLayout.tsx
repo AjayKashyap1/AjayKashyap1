@@ -1,0 +1,3 @@
+import { NavLink, Outlet } from "react-router-dom";
+const links=["Dashboard","Products","Scanner","Competitors","Coverage","India Map","Alerts","Reports","Admin","Settings"];
+export function AppLayout(){return <div className="flex min-h-screen"><aside className="hidden w-72 border-r border-white/10 p-6 lg:block"><h1 className="text-2xl font-black text-white">QC Intel</h1><nav className="mt-10 grid gap-2">{links.map(l=><NavLink key={l} to={l==="Dashboard"?"/":"/"+l.toLowerCase().replaceAll(" ","-")} className={({isActive})=>`rounded-2xl px-4 py-3 ${isActive?"bg-brand text-ink":"text-slate-300 hover:bg-white/10"}`}>{l}</NavLink>)}</nav></aside><main className="flex-1 p-6 lg:p-10"><Outlet/></main></div>}
